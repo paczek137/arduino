@@ -1,0 +1,8 @@
+AT
+OK
+at+cmgf=1
+OK
+at+cmgs="+48798982961"
+> test5
+ERROR
+Time elapsed: 1.1130001545

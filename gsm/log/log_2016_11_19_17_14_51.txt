@@ -1,0 +1,17 @@
+AT
+OK
+at+cmgf=1
+OK
+at+cscs="GSM"
+OK
+at+cnmi=2,1,0,0
+OK
+at+cmgs="+48798982961"
+> gga
+MODEM:STARTUP
+
+MODEM:STARTUP
+
+MODEM:STARTUP
+
++PBREADY

@@ -1,0 +1,46 @@
+    Dim intPortID As Integer ' Ex. 1, 2, 3, 4 for COM1 - COM4
+    Dim lngStatus As Long
+    Dim strError  As String
+    Dim strData   As String
+
+
+    ' Initialize Communications
+    lngStatus = CommOpen(intPortID, "COM" & CStr(intPortID), _
+        "baud=9600 parity=N data=8 stop=1")
+    
+    If lngStatus <> 0 Then
+	' Handle error.
+        lngStatus = CommGetError(strError)
+	MsgBox "COM Error: " & strError
+    End If
+    
+
+    ' Set modem control lines.
+    lngStatus = CommSetLine(intPortID, LINE_RTS, True)
+    lngStatus = CommSetLine(intPortID, LINE_DTR, True)
+
+    ' Write data to serial port.
+    lngSize = Len(strData)
+    lngStatus = CommWrite(intPortID, strData)
+    If lngStatus <> lngSize Then
+	' Handle error.
+    End If
+
+
+
+    ' Read maximum of 64 bytes from serial port.
+    lngStatus = CommRead(intPortID, strData, 64)
+    If lngStatus > 0 Then
+        ' Process data.
+    ElseIf lngStatus < 0 Then
+        ' Handle error.
+    End If
+
+    ' Reset modem control lines.
+    lngStatus = CommSetLine(intPortID, LINE_RTS, False)
+    lngStatus = CommSetLine(intPortID, LINE_DTR, False)
+
+
+
+    ' Close communications.
+    Call CommClose(intPortID)

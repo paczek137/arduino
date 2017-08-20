@@ -1,0 +1,14 @@
+AT
+OK
+at+cmgf=1
+OK
+at+cscs="GSM"
+OK
+at+cnmi=2,1,0,0
+OK
+at+cmgs="+48798982961"
+> ggas
++CMGS: 6
+
+OK
+Time elapsed: 3.98799991608

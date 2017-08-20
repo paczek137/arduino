@@ -1,0 +1,5 @@
+DAC	KEYWORD1
+setVoltage	KEYWORD2
+preciseSineWave	KEYWORD2
+infinitePreciseSineWave	KEYWORD2
+sineWave	KEYWORD2

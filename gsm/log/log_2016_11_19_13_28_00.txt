@@ -1,0 +1,12 @@
+AT
+OK
+at+cmgf=1
+OK
+at+cscs="GSM"
+OK
+at+cmgs="+48798982961"
+> test5
++CMGS: 3
+
+OK
+Time elapsed: 3.59100008011

@@ -1,0 +1,16 @@
+pod³¹czyæ wiatraczek pod 12V
+zmierzyæ natê¿enie pr¹du i zapisaæ jego max wartoœæ Icmax 160mA
+regulacja pr¹dowa od 0A do Icmax
+sprawdziæ collector current max	
+sprawdziæ base current max	
+na wykresie zobaczyæ jaka bêdzie beta	
+napiêcie baza-emiter 0,7V sprawdziæ w nocie
+Ibmax = Icmax/beta	5.6
+obliczenie minimalnej wartoœci rezystora
+Ib=(Ubb-Ube)/Rb
+Ib=(12V-0.7V)/Rb	albo 5V-0.7V
+Rb=11.3V/Ibmax       2k
+pod³¹czyæ szeregowo potencjometr do Rb
+potencjometr z 10k
+Icmin = beta * Ibmin
+
